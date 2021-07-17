@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    background-color: pink;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.helper {
+    height: 8vh;
+}
+p {
+    margin: 0px;
+}
+.Topbtn {
+    display: inline-block;
+    height: 70%;
+    width: 8vw;
+    margin-right: 10px;
+    background-image: url("../images/Camera.png");
+    border: none;
+    background-size: cover;
+    background-position: center;
+}
