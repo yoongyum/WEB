@@ -10,7 +10,7 @@ function App() {
         <h1 className="App-title">SAVER</h1>
         <img src={EyeOn} className="App-logo" alt="logo" />
         <p>
-          리액트 프로젝트
+          리액트 프로젝트 @
         </p>
         <a
           className="App-link"
