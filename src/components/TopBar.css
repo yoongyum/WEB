@@ -1,26 +1,23 @@
-* {
-    box-sizing: border-box;
-}
-.container {
+.TBcontainer {
     display: flex;
-    background-color: pink;
+    flex-direction: row;
+    background: rgb(137, 214, 137);
     height: 8vh;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 1vmin;
 }
-.helper {
-    height: 8vh;
+.titleBTN {
+    margin-left: 10vw;
+    font-family: "Roboto-black";
+    font-size: 28px;
+    color: white;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
 }
-p {
-    margin: 0px;
-}
-.Topbtn {
-    display: inline-block;
-    height: 70%;
-    width: 8vw;
-    margin-right: 10px;
-    background-image: url("../images/Camera.png");
-    border: none;
-    background-size: cover;
-    background-position: center;
+.MinContainer {
+    display: flex;
+    flex: 1;
+    background-color: red;
+    border: 1px solid black;
+    justify-content: center;
 }
