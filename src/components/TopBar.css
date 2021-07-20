@@ -1,23 +1,42 @@
 .TBcontainer {
     display: flex;
     flex-direction: row;
-    background: rgb(137, 214, 137);
+    /* background: rgb(137, 214, 137); */
     height: 8vh;
     padding-top: 1vmin;
 }
-.titleBTN {
+.MinContainer1 {
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+}
+.MinContainer2 {
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+    justify-content: center;
+}
+.MinContainer3 {
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+    justify-content: flex-end;
+}
+.logo_default {
     margin-left: 10vw;
     font-family: "Roboto-black";
-    font-size: 28px;
+    font-size: 36px;
     color: white;
     background: transparent;
     border: 0;
     cursor: pointer;
 }
-.MinContainer {
-    display: flex;
-    flex: 1;
-    background-color: red;
-    border: 1px solid black;
-    justify-content: center;
+.hamburgBTN {
+    margin-right: 20vw;
+    font-family: "Roboto-black";
+    font-size: 36px;
+    color: white;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
 }

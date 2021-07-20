@@ -7,6 +7,7 @@ const Navigation = ()=>{
                         <button className="item">Menu</button>
                         <button className="item">Profile</button>
                         <button className="item">Event</button>
+                        <button className="item">Setting</button>
                 </div>
         )
 }
