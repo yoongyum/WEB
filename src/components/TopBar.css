@@ -2,39 +2,41 @@
     display: flex;
     flex-direction: row;
     /* background: rgb(137, 214, 137); */
-    height: 8vh;
-    padding-top: 1vmin;
+    height: 10vh;
 }
 .MinContainer1 {
     display: flex;
     flex: 1;
-    border: 1px solid black;
+    align-items: flex-end;
 }
 .MinContainer2 {
     display: flex;
     flex: 1;
-    border: 1px solid black;
     justify-content: center;
+    /* background-color: rebeccapurple; */
 }
 .MinContainer3 {
     display: flex;
     flex: 1;
-    border: 1px solid black;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 .logo_default {
-    margin-left: 10vw;
+    margin-left: 14vw;
     font-family: "Roboto-black";
-    font-size: 36px;
+    font-size: 38px;
     color: white;
     background: transparent;
     border: 0;
     cursor: pointer;
 }
 .hamburgBTN {
-    margin-right: 20vw;
-    font-family: "Roboto-black";
-    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 14vw;
+    font-size: calc(10px + 4.5vmin);
+    font-weight: bolder;
     color: white;
     background: transparent;
     border: 0;
