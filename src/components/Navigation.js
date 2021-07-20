@@ -1,13 +1,15 @@
 import './Navigation.css'
 
+var itemlist = ["Home","Menu","Profile","Event","Setting"];
+
 const Navigation = ()=>{
         return(
                 <div className="NVcontainer" >
-                        <button className="item">Home</button>
-                        <button className="item">Menu</button>
-                        <button className="item">Profile</button>
-                        <button className="item">Event</button>
-                        <button className="item">Setting</button>
+                        {
+                                itemlist.map(value=>{
+                                        return <button className="Navi_item">{value}</button>
+                                })
+                        }             
                 </div>
         )
 }
