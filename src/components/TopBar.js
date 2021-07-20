@@ -1,12 +1,20 @@
 import './TopBar.css';
-import Camera from '../images/Camera.png'
-function TopBar() {
+import Navigation from './Navigation';
+
+
+const fun=()=>{
+        console.log("gg")
+}
+const TopBar=()=> {
+        
         return(
-                <div class="container">
-                        <p>Bar</p>
-                        <a type="button" class='Topbtn'/>
-                                
-                        
+                <div className="TBcontainer">
+                        {/* <button className="titleBTN" onClick={fun}>Kream</button>
+                        <Navigation/>  
+                        <p>Hello</p> */}
+                        <div className="MinContainer"></div>
+                        <div className="MinContainer"><Navigation/> </div>
+                        <div className="MinContainer"></div>
                 </div>
         )
 }
