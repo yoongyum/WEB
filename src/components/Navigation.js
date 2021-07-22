@@ -4,10 +4,10 @@ var itemlist = ["Home","Menu","Profile","Event","Setting"];
 
 const Navigation = ()=>{
         return(
-                <div className="NVcontainer" >
+                <div class="NVcontainer" >
                         {
                                 itemlist.map(value=>{
-                                        return <button class="Navi_item">{value}</button>
+                                        return <div className="Navi_item">{value}</div>
                                 })
                         }             
                 </div>
