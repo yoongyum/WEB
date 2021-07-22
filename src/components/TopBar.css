@@ -1,12 +1,12 @@
 .TBcontainer {
     display: flex;
     flex-direction: row;
-    /* background: rgb(137, 214, 137); */
+    background: #484848;
     /* height: 10vh; */
     min-height: 9vh;
 }
 .MinC {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex: 1;
 }
@@ -40,4 +40,8 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+}
+.hamburgBTN::after {
+    content: "";
+    display: block;
 }
