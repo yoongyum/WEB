@@ -6,11 +6,13 @@ const TopBar=()=> {
         
         return(
                 <div className="TBcontainer">
-                        <div className="MinContainer1">
+                        <div class="MinC minc1">
                                 <button className="logo_default">KREAM</button>
                         </div>
-                        <div className="MinContainer2"><Navigation/></div>
-                        <div className="MinContainer3">
+                        <div class="MinC minc2">
+                                <Navigation/>
+                        </div>
+                        <div class="MinC minc3">
                                 <button className="hamburgBTN"><FiAlignJustify/></button>
                         </div>
                 </div>

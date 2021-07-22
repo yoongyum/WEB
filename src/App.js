@@ -9,8 +9,9 @@ function App() {
       <TopBar />
       <header className="App-header">
         <Grid />
-        
       </header>
+        
+     
     </div>
   );
 }
