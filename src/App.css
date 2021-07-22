@@ -42,7 +42,7 @@
     /* background-color: #3a2f0b; */
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: NotoSans-Medium;
