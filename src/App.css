@@ -10,6 +10,7 @@
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
+    height: 1200px;
 }
 
 .App-logo {
@@ -41,8 +42,7 @@
     font-family: "Suranna";
     src: url("./fonts/Suranna-Regular.ttf");
 }
-.App-header {
-    background-color: #01df74;
+/* .App-header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,8 @@
     font-family: NotoSans-Medium;
     font-size: calc(10px + 2vmin);
     color: white;
-}
+    margin-top: 100px;
+} */
 
 .App-link {
     color: #61dafb;

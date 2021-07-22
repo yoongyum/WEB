@@ -2,23 +2,58 @@
     box-sizing: border-box;
 }
 
+.all{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: NotoSans-Medium;
+    color: white;
+    margin-top: 100px;
+}
+
 .grid{
     width: 300px;
     height: 300px;
     background-color: rgb(253, 245, 234);
     border-radius: 10px;
-    display: inline-block;
-    margin-right: 10px;
+    margin-right: 50px;
     text-align: center;
+    transition-duration: 0.5s;
+    overflow: hidden;
 }
 
-.change{
-    background-color: cadetblue;
+.grid li{
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    list-style: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 }
 
+.grid:hover{
+    width: 450px;
+    height: 450px;
+}
+.grid img{
+    margin:40px 40px 60px 40px;
+}
 .btn{
-    transition-duration: 1s;
+     transition-duration: 0.5s;
+}
+.change_1{
+    background-color: rgb(255, 160, 83);
+}
+.change_2{
+    background-color: rgb(134, 134, 134);
+}
+.change2{
+    background-color: transparent;
 }
 .btn:hover{
-    width: 300px;
+    width: 370px;
+}
+.text:hover{
+    color: white;
 }
