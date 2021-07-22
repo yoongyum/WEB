@@ -7,7 +7,7 @@ const Navigation = ()=>{
                 <div className="NVcontainer" >
                         {
                                 itemlist.map(value=>{
-                                        return <button className="Navi_item">{value}</button>
+                                        return <button class="Navi_item">{value}</button>
                                 })
                         }             
                 </div>
