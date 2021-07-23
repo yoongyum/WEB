@@ -2,7 +2,7 @@
 import './App.css';
 import TopBar from './components/TopBar'
 import Grid from './components/Grid'
-import Grid2 from './components/Grid2'
+// import Grid2 from './components/Grid2'
  
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <TopBar />
       <header className="App-header">
         <Grid />
-        <Grid2/>
+        {/* <Grid2/> */}
       </header>
         
      

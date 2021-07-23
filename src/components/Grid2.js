@@ -6,7 +6,7 @@ import Img8 from '../images/8.png'
 import { Fragment } from 'react'
 
 const Grid2=()=>{
-    function mouseOver(e){
+    function mouseOver1(e){
         if(e.target.classList.contains(`grid`)){
            e.target.classList.add('grid:hover',`change_2`)
         }  
@@ -14,7 +14,7 @@ const Grid2=()=>{
            e.target.classList.add('btn:hover','change2')
         }
     } 
-    function mouseOut(e){
+    function mouseOut1(e){
         if(e.target.classList.contains(`grid`)){
             e.target.classList.remove(`change_2`,'grid:hover')
         }
