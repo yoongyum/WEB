@@ -11,6 +11,7 @@
     background-size: cover;
     background-position: center;
     height: 1200px;
+    transition: 2s;
 }
 
 .App-logo {

@@ -1,19 +1,20 @@
 import './TopBar.css';
 import Navigation from './Navigation';
+import Logo from '../images/KREAMLOGOWHITE.svg'
 import { FiAlignJustify } from "react-icons/fi";
 
-const TopBar=()=> {
+const TopBar=({onModal})=> {
         
         return(
                 <div className="TBcontainer">
-                        <div class="MinC minc1">
-                                <button className="logo_default">KREAM</button>
+                        <div className="MinC minc1"> 
+                                <img src={Logo} className="KreamLogo" alt="haha"/>
                         </div>
-                        <div class="MinC minc2">
-                                <Navigation/>
+                        <div className="MinC minc2">
+                                <Navigation onModal={onModal}/>
                         </div>
-                        <div class="MinC minc3">
-                                <button className="hamburgBTN"><FiAlignJustify/></button>
+                        <div className="MinC minc3">
+                                <FiAlignJustify className="hamburgBTN"/>
                         </div>
                 </div>
         )

@@ -1,7 +1,7 @@
 .TBcontainer {
     display: flex;
     flex-direction: row;
-    background: #484848;
+    background: #222222;
     /* height: 10vh; */
     min-height: 9vh;
 }
@@ -20,19 +20,14 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
-.logo_default {
+.KreamLogo {
     margin-left: 14vw;
-    font-family: "Roboto-black";
-    font-size: 38px;
-    color: white;
-    background: transparent;
-    border: 0;
+    width: 12vw;
+    height: 7vh;
     cursor: pointer;
 }
 .hamburgBTN {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
     margin-right: 14vw;
     font-size: calc(10px + 4.5vmin);
     font-weight: bolder;
@@ -40,8 +35,4 @@
     background: transparent;
     border: 0;
     cursor: pointer;
-}
-.hamburgBTN::after {
-    content: "";
-    display: block;
 }

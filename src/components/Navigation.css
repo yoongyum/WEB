@@ -3,13 +3,20 @@
 }
 .NVcontainer {
     flex: 1;
+    /* background-color: darkblue; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 0.5vh;
+    padding-bottom: 0.7vh;
 }
-.Navi_item {
+.NVicon {
+    font-size: calc(10px + 2vmin);
+    color: #fff;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.NVitem {
     margin: 0 15px 0 15px;
     padding: 2px 5px 2px 5px;
     text-align: center;
@@ -17,12 +24,13 @@
     font-size: calc(8px + 1vmin);
     font-family: "NotoSans-Medium";
     color: #fff;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: 1s;
     z-index: 1;
 }
-.Navi_item::after {
+.NVitem::after {
     position: absolute;
     transition: 0.8s;
     content: "";
@@ -31,13 +39,13 @@
     height: 100%;
     background: #fff;
     right: -10%;
-    transform: skewX(20deg);
+    transform: skewX(15deg);
     z-index: -1;
 }
-.Navi_item:hover::after {
+.NVitem:hover::after {
     left: -10%;
     width: 120%;
 }
-.Navi_item:hover {
+.NVitem:hover {
     color: #484848;
 }
