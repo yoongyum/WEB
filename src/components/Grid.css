@@ -26,8 +26,8 @@
 
 .grid li{
     display: inline-block;
-    width: 300px;
-    margin: 20px 20px 40px 20px;
+    width: 200px;
+    margin: 0px 20px 0px 20px;
     list-style: none;
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -38,10 +38,7 @@
     height: 450px;
 }
 .grid img{
-    margin:30px 40px 50px 40px; 
-}
-.btn{
-     transition-duration: 0.4s;
+    margin:30px 40px 120px 40px; 
 }
 .change_1{
     background-color: rgb(255, 160, 83);
@@ -52,22 +49,24 @@
 .change2{
     background-color: transparent;
 }
-.btn:hover{
+.imgset{
+     transition-duration: 0.4s;
+}
+.imgset:hover{
     width: 370px;
 }
 .text:hover{
     color: white;
 }
-button{
+.Btn {
     border-radius: 10px;
     border: transparent;
     cursor: pointer;
     transition-duration: 0.5s;
     display: block;
     margin: 100px auto 100px auto;
-
 }
 
-button:hover{
+.Btn:hover{
     background-color: slategray;
 }
