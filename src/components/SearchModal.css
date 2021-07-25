@@ -1,3 +1,6 @@
+*:focus {
+    outline: 0;
+}
 .SContainer {
     display: flex;
     position: fixed;
@@ -14,14 +17,35 @@
     justify-content: center;
     align-items: center;
 }
+.SearchBar {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    background-color: #dbdbdb;
+    border-radius: 20px;
+}
+
 .search {
+    padding-top: 10px;
+    margin-left: 20px;
     width: 20vw;
     height: 5vh;
-    background-color: rgb(219, 219, 219);
-    border: 0;
+    font-size: 24px;
+    font-family: "Suranna";
+    font-weight: bold;
+    background-color: blue;
+    border: none;
+    resize: none;
+    color: #000;
+}
+.search::placeholder {
+    background-color: transparent;
+    color: #959595;
+    font-style: italic;
+    font-size: 24px;
 }
 .BlackArea {
     background-color: #000;
     flex: 0.7;
-    opacity: 0.4;
+    opacity: 0.5;
 }
