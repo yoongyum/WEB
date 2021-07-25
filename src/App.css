@@ -10,8 +10,8 @@
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
-    height: 1200px;
     transition: 2s;
+    height: fit-content;
 }
 
 .App-logo {
