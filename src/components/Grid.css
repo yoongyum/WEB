@@ -37,16 +37,8 @@
     width: 450px;
     height: 450px;
 }
-<<<<<<< HEAD
 .grid img {
-    margin: 30px 40px 50px 40px;
-}
-.btn {
-    transition-duration: 0.4s;
-=======
-.grid img{
-    margin:30px 40px 120px 40px; 
->>>>>>> main
+    margin: 30px 40px 120px 40px;
 }
 .change_1 {
     background-color: rgb(255, 160, 83);
@@ -57,24 +49,16 @@
 .change2 {
     background-color: transparent;
 }
-<<<<<<< HEAD
-.btn:hover {
-=======
-.imgset{
-     transition-duration: 0.4s;
+.imgset {
+    transition-duration: 0.4s;
 }
-.imgset:hover{
->>>>>>> main
+.imgset:hover {
     width: 370px;
 }
 .text:hover {
     color: white;
 }
-<<<<<<< HEAD
-button {
-=======
 .Btn {
->>>>>>> main
     border-radius: 10px;
     border: transparent;
     cursor: pointer;
@@ -83,10 +67,6 @@ button {
     margin: 100px auto 100px auto;
 }
 
-<<<<<<< HEAD
-button:hover {
-=======
-.Btn:hover{
->>>>>>> main
+.Btn:hover {
     background-color: slategray;
 }
