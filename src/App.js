@@ -19,6 +19,7 @@ function App() {
       <TopBar onModal={onModal}/>
       {modal?<SearchModal onModal={onModal}/>:null}
       <Chat />
+      <Banner />
       <header className="App-header"> 
         <Banner />
       </header>
