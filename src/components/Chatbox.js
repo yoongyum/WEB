@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import './Chatbox.css'
-import chatbox from '../images/챗박스.png'
 import enter from '../images/전송.png'
 import React,{useState} from 'react';
+import {GiSmartphone} from 'react-icons/gi'
 
 const Chatbox=()=>{
     const [modal,SetModal]=useState(false);
@@ -18,7 +18,7 @@ const Chatbox=()=>{
                 <button className="enter-btn"><img className="img-enter" src={enter} width='60px' alt=""></img></button>
             </div>
             :null}
-            <button className="chat-btn" onClick={ClickModal}><img src={chatbox} width='50px' alt=""></img></button>
+            <button className="chat-btn" onClick={ClickModal}><GiSmartphone className="click-img"/></button>
         </Fragment>
     )
 }
