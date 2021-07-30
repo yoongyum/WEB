@@ -22,7 +22,7 @@ function App() {
       <header className="App-header"> 
         <Grid />
       </header>
-      </div>
+    </div>
   );
 }
 
