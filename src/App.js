@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <TopBar onModal={onModal}/>
       {modal?<SearchModal onModal={onModal}/>:null}
-      <Banner />
       <Chat />
+      <Banner />
       <header className="App-header"> 
         <Grid />
       </header>
