@@ -12,6 +12,7 @@ const Banner=()=>{
                     <img
                     className="d-block w-100"
                     src={Gray} height="700px"
+
                     alt="First slide"
                     />
                     <Carousel.Caption>

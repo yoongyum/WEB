@@ -11,11 +11,13 @@
     color: white;
     margin-top: 100px;
 }
-
+.mother {
+    background-color: orange;
+}
 .grid {
     width: 300px;
     height: 300px;
-    background-color: rgb(253, 245, 234);
+    background-color: #a9e2f3;
     border-radius: 10px;
     margin-left: 25px;
     margin-right: 25px;
@@ -41,7 +43,7 @@
     margin: 30px 40px 120px 40px;
 }
 .change_1 {
-    background-color: rgb(255, 160, 83);
+    background-color: #fe2e9a;
 }
 .change_2 {
     background-color: rgb(134, 134, 134);
