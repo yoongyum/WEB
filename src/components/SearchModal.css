@@ -8,8 +8,9 @@
     height: 100%;
     flex-direction: column;
     transition: 1s;
-    z-index: 2;
+    z-index: 9001;
 }
+
 .SearchArea {
     flex: 0.3;
     display: flex;
@@ -18,31 +19,32 @@
     align-items: center;
 }
 .SearchBar {
+    margin: 20px;
     display: flex;
+    height: 8vmin;
     padding: 15px;
+    align-items: center;
     justify-content: center;
     background-color: #dbdbdb;
-    border-radius: 20px;
+    border-radius: 1.4vw;
 }
 
 .search {
-    padding-top: 10px;
     margin-left: 20px;
     width: 20vw;
     height: 5vh;
-    font-size: 24px;
+    font-size: 1.3vw;
     font-family: "Suranna";
     font-weight: bold;
-    background-color: blue;
+    background-color: transparent;
     border: none;
-    resize: none;
-    color: #000;
+    color: rgb(46, 46, 46);
 }
 .search::placeholder {
     background-color: transparent;
     color: #959595;
     font-style: italic;
-    font-size: 24px;
+    font-size: 1vw;
 }
 .BlackArea {
     background-color: #000;

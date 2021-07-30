@@ -6,6 +6,7 @@ import { FiAlignJustify } from "react-icons/fi";
 const TopBar=({onModal})=> {
         
         return(
+                <>
                 <div className="TBcontainer">
                         <div className="MinC minc1"> 
                                 <img src={Logo} className="KreamLogo" alt="haha"/>
@@ -17,6 +18,7 @@ const TopBar=({onModal})=> {
                                 <FiAlignJustify className="hamburgBTN"/>
                         </div>
                 </div>
+                </>
         )
 }
 

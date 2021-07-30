@@ -6,9 +6,8 @@ import SearchModal from './components/SearchModal'
 import Banner from './components/Banner'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Chat from './components/Chatbox'
-// import Grid2 from './components/Grid2'
+import SubBanner from './containers/SubBanner';
  
-
 
 function App() {
   const [modal, SetModal] = useState(false);
@@ -20,11 +19,13 @@ function App() {
       <TopBar onModal={onModal}/>
       {modal?<SearchModal onModal={onModal}/>:null}
       <Chat />
-      <Banner />
       <header className="App-header"> 
-        <Grid />
+        <Banner />
       </header>
-      </div>
+      <Grid />
+      <SubBanner />
+      <p>end</p>
+    </div>
   );
 }
 

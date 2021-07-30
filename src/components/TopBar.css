@@ -1,9 +1,12 @@
 .TBcontainer {
     display: flex;
+    width: 100vw;
     flex-direction: row;
     background: #222222;
+    position: fixed;
     /* height: 10vh; */
     min-height: 9vh;
+    z-index: 9000;
 }
 .MinC {
     /* border: 2px solid black; */
