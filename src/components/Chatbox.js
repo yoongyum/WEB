@@ -12,10 +12,6 @@ const Chatbox=()=>{
     const ClickModal=()=>{
         SetModal(!modal);
         }
- 
-     
-
-    
     //text : 현재값 / setText: 변경할 값 / useState({초기값})
     const [text, setText] = useState('')  
      
