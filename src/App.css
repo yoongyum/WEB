@@ -10,7 +10,7 @@
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
-    transition: 2s;
+    transition: 1s;
     height: fit-content;
 }
 
