@@ -5,26 +5,36 @@ import React,{useState} from 'react';
 import {GiSmartphone} from 'react-icons/gi'
 
 const Chatbox=()=>{
-    const textgrid=document.querySelector(`.text-grid`)
-    const display=document.querySelector(`.chat-display`)
+    const textarea=document.querySelector(`.text-grid`);
+    const display=document.querySelector(`.chat-display`);
 
     const [modal,SetModal]=useState(false); 
     const ClickModal=()=>{
         SetModal(!modal);
-        }
-    //text : 현재값 / setText: 변경할 값 / useState({초기값})
+        } //핸드폰 버튼 클릭시 채팅화면의 유무
+
+
     const [text, setText] = useState('')  
-     
     const onChange = (e) => {
-             setText(e.target.value)		//이벤트 발생한 value값으로 {text} 변경
+             setText(e.target.value)		
     }
      
-    const onReset = () => {			
-         setText("")			     // onClick함수 발생시 ''으로 {text} 변경
-    }
 
+    const list={'제작자':'색귀&여미&탐욕겸과 임현영','용도':'포트폴리오'}
+    // const divList=['right-display','left-display']
+    
 
-    let list={'제작자':'색귀&여미&탐욕겸과 임현영','용도':'포트폴리오'}
+    // const add=(val)=>{
+    //     const rCommand=document.createElement(`div`);
+    //     rCommand.classList.add(`right-display`);
+    //     rCommand.innerText=val;
+    //     display.append(rCommand);
+        
+    //     const lCommand=document.createElement(`div`);
+    //     lCommand.classList.add(`left-display`);
+    //     lCommand.innerText=list[val];
+    //     display.append(lCommand);
+    // }
 
     function textInput(){
         display.innerText=""
@@ -39,6 +49,18 @@ const Chatbox=()=>{
             lCommand.innerText=list[text];
             display.append(lCommand);
         }
+        else{
+            const rCommand=document.createElement(`div`);
+            rCommand.classList.add(`right-display`);
+            rCommand.innerText=text;
+            display.append(rCommand);
+            
+            const lCommand=document.createElement(`div`);
+            lCommand.classList.add(`left-display`);
+            lCommand.innerText="명령어를 제대로 입력해주세요!";
+            display.append(lCommand);
+        }
+        textarea.value="";
     }
 
     function enterPress(e){
@@ -46,7 +68,7 @@ const Chatbox=()=>{
             textInput();
             e.preventDefault();
         }
-
+        e.target.value="";
     }
 
     return(
