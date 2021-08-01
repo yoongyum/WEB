@@ -1,31 +1,50 @@
 
+import { useEffect, useState } from "react"
 import styled from 'styled-components'
-
+import Timer from '../components/SubBanner/Timer'
 //이미지 불러오기
 import content1 from '../images/luckydraw/luck1.png'
 import content2 from '../images/luckydraw/luck2.png'
 import content3 from '../images/luckydraw/luck3.png'
 import content4 from '../images/luckydraw/luck4.png'
 
+//상품 정보
+const DrawContents = [
+        { 
+                img : content1,
+                name : 'Converse x Play Comme des Garcons Chuck 70 Ox Blue Quartz',
+                Dday : '2021-08-03 12:00',
+        },{
+                img : content2,
+                name : 'Dior B23 Low Dior Oblique White & Black',
+                Dday : '2021-08-21 12:00',
+        },{
+                img : content3,
+                name : 'sadfasdf',
+                Dday : '2021-08-31 13:00',
+        }
+]
 
+let curNum=0;
 const SubBanner =()=>{
+        const [num,setnum] = useState(0);
+        const ChangeNum=(number)=>{
+                setnum(number);
+        }
         return(
                 <Container>
                         <Content>
                                 <TitleBar>
                                         <TitleText>LUCKY DRAW</TitleText>
-                                        <Time>DD HH MM SS</Time>
+                                        <Timer Dday={DrawContents[num].Dday}/>
                                 </TitleBar>
-                                <Item> 
-                                          
-                                </Item>
-                                <Name>Converse x Play Comme des Garcons Chuck 70 Ox Blue Quartz</Name>
+                                <Item num={num}/> 
+                                <Name>{DrawContents[num].name}</Name>
                         </Content>
                         <TabBar>
-                                <Tab />
-                                <Tab />
-                                <Tab />
-                                <Tab />
+                                {DrawContents.map((value,idx)=>{
+                                        return <Tab onClick={()=>ChangeNum(idx)}/>
+                                })}
                         </TabBar>
                 </Container>
         )
@@ -52,16 +71,10 @@ const TitleBar = styled.div`
         align-items: center;
 `
 const TitleText = styled.div`
-        color : #808080;
+        color : #ffd700;
         font-family: 'Roboto-Black';
-        font-size: 3.5vh;
-`
-const Time = styled.div`
-        display : flex;
-        margin-top: 5vh;
-        text-align: center;
-        font-size: 5.5vh;
-        color : #dbdbdb
+        font-style: italic;
+        font-size: 4vh;
 `
 //상품명 영역
 const Name = styled.div`
@@ -89,10 +102,9 @@ const Item = styled.div`
         width: 30vw;
         /* background-color: #969696; */
         background-size: contain;
-        background-image: url("${content1}");
+        background-image: url("${(props)=>DrawContents[props.num].img}");
         justify-content: center;
         align-items: center;
-        z-index : 2;
 `
 //하단탭 =====================================
 const TabBar = styled.div`
