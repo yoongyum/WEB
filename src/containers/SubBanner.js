@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import styled from 'styled-components'
 import Timer from '../components/SubBanner/Timer'
 //이미지 불러오기
@@ -20,17 +20,17 @@ const DrawContents = [
                 Dday : '2021-08-21 12:00',
         },{
                 img : content3,
-                name : 'sadfasdf',
+                name : 'Nike SB Dunk Low What The Paul',
                 Dday : '2021-08-31 13:00',
+        },{
+                img : content4,
+                name : 'Nike x Peaceminusone Air Force 1 Low Para-Noise 2.0',
+                Dday : '2021-08-25 23:00',
         }
 ]
 
-let curNum=0;
 const SubBanner =()=>{
         const [num,setnum] = useState(0);
-        const ChangeNum=(number)=>{
-                setnum(number);
-        }
         return(
                 <Container>
                         <Content>
@@ -43,7 +43,7 @@ const SubBanner =()=>{
                         </Content>
                         <TabBar>
                                 {DrawContents.map((value,idx)=>{
-                                        return <Tab onClick={()=>ChangeNum(idx)}/>
+                                        return <Tab num={num} idx={idx} onClick={()=>setnum(idx)}/>
                                 })}
                         </TabBar>
                 </Container>
@@ -65,10 +65,11 @@ const Container = styled.div`
 const TitleBar = styled.div`
         display : flex;
         width: 25vw;
+        padding-top: 8vh;
         flex-direction : column;
-        /* background-color: pink; */
         justify-content: center;
         align-items: center;
+        transition: 1s;
 `
 const TitleText = styled.div`
         color : #ffd700;
@@ -80,49 +81,86 @@ const TitleText = styled.div`
 const Name = styled.div`
         display : flex;
         width: 25vw;
-        padding-top: 5vh;
-        /* background-color: pink; */
+        padding-top: 8vh;
         align-items: center;
         text-align:  center;
         font-size: 4vh;
         font-family: 'Suranna';
-        color : #dbdbdb
+        color : #dbdbdb;
+        transition: 1s;
+        overflow: hidden;
+        position: relative;
+        &::before{
+                position : absolute;
+                content: '';
+                transform: scale(0);
+        }
+        &:hover::before{
+                transform: scale(2);
+        }
 `
 //====================================
 const Content = styled.div`
         display: flex;
-        height: 80vh;
+        height: 70vh;
         width: 100vw;
         justify-content: center;
+        align-items: center;
+        transition: 1s;
 `
 //이미지 영역
 const Item = styled.div`
         display : flex;
-        margin:0 3vw 0 3vw;
-        width: 30vw;
-        /* background-color: #969696; */
+        margin:0 5vw 0 5vw;
+        width: 22vw;
+        height: 22vw;
         background-size: contain;
+        /* background-color: pink; */
         background-image: url("${(props)=>DrawContents[props.num].img}");
-        justify-content: center;
-        align-items: center;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover{
+                transform: scale(1.2);
+        }
+        &:active{
+                transform: scale(1.1);
+        }
 `
 //하단탭 =====================================
 const TabBar = styled.div`
         display: flex;
         flex-direction: row;
         width: 20vw;
-        height: 5vh;
+        height: 8vh;
         justify-content: center;
         /* background-color: cyan; */
         font-size: 3vh;
-        color : #dbdbdb
-        
+        color : #dbdbdb;
 `
 const Tab = styled.div`
-        margin : 0 0.5vw 0 0.5vw;
-        width: 3vw;
-        height: 0.6vh;
-        background-color: #969696;
+        flex : 1;
+        width: 4vw;
+        height: 1vh;
+        position: relative;
+        overflow:hidden;
+        background-color: ${(props)=>props.num == props.idx ? '#fff':'#969696'};
         cursor: pointer;
-
+        transition: .3s;
+        &::after{
+                position: absolute;
+                content: '';
+                width: 0;
+                left: 50%;
+                height: 100%;
+                transition: .5s;
+                background-color: #FFF;
+        }
+        &:hover{
+                transform: scaleY(2);
+        }
+        &:hover::after{
+                width : 100%;
+                left: 0;
+                opacity : .5;
+        }
 `
