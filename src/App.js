@@ -4,7 +4,7 @@ import TopBar from './components/TopBar'
 import Grid from './components/Grid'
 import SearchModal from './components/SearchModal'
 import Banner from './components/Banner'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/Banner.css';
 import Chat from './components/Chatbox'
 import SubBanner from './containers/SubBanner';
  
