@@ -12,54 +12,74 @@
     margin-top: 100px;
 }
 .mother {
-    background-color: orange;
+    background-image: url(../images/nike.png);
+    background-size: 45%;
+    background-position: top;
+    background-repeat:no-repeat;
 }
 .grid {
+    cursor: pointer;
     width: 300px;
     height: 300px;
-    background-color: #a9e2f3;
+    background-color: #ffffff;
     border-radius: 10px;
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
+    border: 5px solid rgb(44, 44, 44);
 }
 
 .grid li {
     display: inline-block;
     width: 200px;
-    margin: 0px 20px 0px 20px;
+    margin: 10px 20px 0px 20px;
     list-style: none;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
-.grid:hover {
+.grid_hover {
     width: 450px;
     height: 450px;
+    border: none;
+    /* cursor: url('../images/마우스오른쪽.cur'),auto !important; */
 }
-.grid img {
-    margin: 30px 40px 120px 40px;
-}
+
 .change_1 {
-    background-color: #fe2e9a;
+    background-color: #fea42e;
 }
 .change_2 {
     background-color: rgb(134, 134, 134);
 }
-.change2 {
-    background-color: transparent;
+
+.grid img {
+
+    margin: 30px 50px 50px 50px;
 }
+
+.stopEvent{
+    pointer-events: none;
+}
+
 .imgset {
     transition-duration: 0.4s;
 }
 .imgset:hover {
     width: 370px;
 }
-.text:hover {
-    color: white;
+
+.warning{
+    margin-top: 30px;
+    font-size: 15px;
+    color: black;
+    display: inline-block;
 }
+.mouseImg{
+    display: block;
+}
+
 .Btn {
     border-radius: 10px;
     border: transparent;
@@ -70,5 +90,9 @@
 }
 
 .Btn:hover {
-    background-color: slategray;
+    background-color: rgb(0, 0, 0);
 }
+
+/* .cursor{
+    cursor: url(../images/마우스오른쪽.cur);
+} */
