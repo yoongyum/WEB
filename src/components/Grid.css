@@ -13,6 +13,7 @@
 }
 .mother {
     background-image: url(../images/nike.png);
+    background-attachment: fixed;
     background-size: 45%;
     background-position: top;
     background-repeat:no-repeat;
@@ -26,25 +27,27 @@
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     overflow: hidden;
-    border: 5px solid rgb(44, 44, 44);
+    border: 4px solid white;
+}
+
+.grid:hover{
+    border: 4px solid rgb(0, 0, 0);
 }
 
 .grid li {
     display: inline-block;
-    width: 200px;
-    margin: 10px 20px 0px 20px;
-    list-style: none;
+    width: 70%;
+    margin: 20px 0px 0px 0px;
     font-size: 20px;
-    color: black;
+    color: #5f3600;
 }
 
 .grid_hover {
     width: 450px;
     height: 450px;
-    border: none;
-    /* cursor: url('../images/마우스오른쪽.cur'),auto !important; */
+    border: 4px solid #fea42e;
 }
 
 .change_1 {
@@ -55,8 +58,7 @@
 }
 
 .grid img {
-
-    margin: 30px 50px 50px 50px;
+    margin: 30px 0px 50px 0px;
 }
 
 .stopEvent{
@@ -65,9 +67,11 @@
 
 .imgset {
     transition-duration: 0.4s;
+    cursor:initial;
 }
 .imgset:hover {
     width: 370px;
+    cursor: initial;
 }
 
 .warning{
