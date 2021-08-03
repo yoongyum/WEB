@@ -7,6 +7,7 @@ import Banner from './components/Banner'
 import './components/Banner.css';
 import Chat from './components/Chatbox'
 import SubBanner from './containers/SubBanner';
+import SubGrid from './containers/SubGrid';
  
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       </header>
       <Grid />
       <SubBanner />
-      <p>end</p>
+      <SubGrid />
+      <p>LoremEa aliquip exercitation culpa laboris consectetur irure ea. Voluptate ipsum tempor esse veniam reprehenderit occaecat labore nulla nulla id magna. Sint aliquip veniam quis laborum nulla mollit nisi sint do quis sit id. Enim cupidatat ad mollit et duis deserunt Lorem duis fugiat eiusmod ipsum.</p>
     </div>
   );
 }

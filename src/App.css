@@ -9,6 +9,7 @@
     flex-direction: column;
     transition: 1s;
     height: fit-content;
+    font-size: 50px;
 }
 
 .App-logo {

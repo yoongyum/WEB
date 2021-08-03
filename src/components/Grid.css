@@ -15,7 +15,7 @@
     background-image: url(../images/nike.png);
     background-size: 45%;
     background-position: top;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 .grid {
     cursor: pointer;
@@ -55,11 +55,10 @@
 }
 
 .grid img {
-
     margin: 30px 50px 50px 50px;
 }
 
-.stopEvent{
+.stopEvent {
     pointer-events: none;
 }
 
@@ -70,13 +69,13 @@
     width: 370px;
 }
 
-.warning{
+.warning {
     margin-top: 30px;
     font-size: 15px;
     color: black;
     display: inline-block;
 }
-.mouseImg{
+.mouseImg {
     display: block;
 }
 
