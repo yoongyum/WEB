@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from 'styled-components'
 import Timer from '../components/SubBanner/Timer'
 //이미지 불러오기
@@ -13,7 +13,7 @@ const DrawContents = [
         { 
                 img : content1,
                 name : 'Converse x Play Comme des Garcons Chuck 70 Ox Blue Quartz',
-                Dday : '2021-08-03 12:00',
+                Dday : '2021-08-05 12:00',
         },{
                 img : content2,
                 name : 'Dior B23 Low Dior Oblique White & Black',
@@ -31,11 +31,17 @@ const DrawContents = [
 
 const SubBanner =()=>{
         const [num,setnum] = useState(0);
+        const [offsetY,SetoffsetY] = useState(0);
+        const handleScroll=()=> SetoffsetY(window.pageYOffset);
+        useEffect(()=>{
+                window.addEventListener('scroll',handleScroll);
+                return()=>window.removeEventListener('scroll',handleScroll);
+        },[])
         return(
                 <Container>
                         <Content>
                                 <TitleBar>
-                                        <TitleText>LUCKY DRAW</TitleText>
+                                        <TitleText offsetY={offsetY}>LUCKY DRAW</TitleText>
                                         <Timer Dday={DrawContents[num].Dday}/>
                                 </TitleBar>
                                 <Item num={num}/> 
@@ -69,13 +75,16 @@ const TitleBar = styled.div`
         flex-direction : column;
         justify-content: center;
         align-items: center;
-        transition: 1s;
 `
 const TitleText = styled.div`
+        position: relative;
+        left: -110%;
         color : #ffd700;
         font-family: 'Roboto-Black';
         font-style: italic;
-        font-size: 4vh;
+        font-size: 6vh;
+        transition: .6s;
+        transform: translateX(${(props)=>props.offsetY*0.019}vw) ;
 `
 //상품명 영역
 const Name = styled.div`
@@ -87,17 +96,6 @@ const Name = styled.div`
         font-size: 4vh;
         font-family: 'Suranna';
         color : #dbdbdb;
-        transition: 1s;
-        overflow: hidden;
-        position: relative;
-        &::before{
-                position : absolute;
-                content: '';
-                transform: scale(0);
-        }
-        &:hover::before{
-                transform: scale(2);
-        }
 `
 //====================================
 const Content = styled.div`
@@ -143,7 +141,7 @@ const Tab = styled.div`
         height: 1vh;
         position: relative;
         overflow:hidden;
-        background-color: ${(props)=>props.num == props.idx ? '#fff':'#969696'};
+        background-color: ${(props)=>props.num === props.idx ? '#fff':'#969696'};
         cursor: pointer;
         transition: .3s;
         &::after{
