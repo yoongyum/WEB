@@ -50,14 +50,20 @@ const Grid=()=>{
     } 
 
     function mouseDown2(e){
-        if(e.target.classList.contains(`grid`)&&e.button===0){
+        if((e.target.classList.contains(`fake`))&&e.button===0){
             e.target.classList.add('grid_hover','change_2')
+            e.target.classList.remove('fake')
             e.target.firstElementChild.classList.remove(`stopEvent`)
         }
-        if((e.target.classList.contains(`grid`))&&e.button===2) {
+        else if((!e.target.classList.contains(`fake`)&&e.target.classList.contains(`grid`))&&e.button===0) {
              e.target.classList.remove('grid_hover','change_2')
+             e.target.classList.add(`fake`)
              e.target.firstElementChild.classList.add(`stopEvent`)
         }
+        else if((!e.target.classList.contains(`fake`)&&e.target.classList.contains(`list`))&&e.button===0) {
+            e.target.parentElement.classList.remove('grid_hover','change_2')
+            e.target.previousElementSibling.classList.add(`stopEvent`)
+       }
     } 
     //오른쪽 키 누를 때 쓸데없는 화면뜨는 것 방지
     function del(e){
@@ -83,8 +89,7 @@ const Grid=()=>{
                         list2.map((val)=>{    
                         return <div onMouseDown={mouseDown2} className="grid fake">
                         <img src={val.img} className="imgset stopEvent" width="200px" alt=""></img>
-                        <li>{val.title}</li>
-                        <li>{val.content}</li>
+                        <li className="list">{val.title} {val.content}</li>
                         </div>
                     }):null} 
             </div>

@@ -12,6 +12,8 @@
     margin-top: 100px;
 }
 .mother {
+    width: 100vw;
+    background-color: lightgray;
     background-image: url(../images/nike.png);
     background-attachment: fixed;
     background-size: 45%;
@@ -41,20 +43,22 @@
     width: 70%;
     margin: 20px 0px 0px 0px;
     font-size: 20px;
-    color: #5f3600;
 }
 
 .grid_hover {
     width: 450px;
     height: 450px;
-    border: 4px solid #fea42e;
 }
 
 .change_1 {
     background-color: #fea42e;
+    border: 4px solid #fea42e;
+    color: #5f3600;
 }
 .change_2 {
     background-color: rgb(134, 134, 134);
+    border: 4px solid rgb(134, 134, 134);
+    color: rgb(68, 68, 68);
 }
 
 .grid img {
@@ -91,10 +95,11 @@
     transition-duration: 0.5s;
     display: block;
     margin: 100px auto 100px auto;
+    background-color: #484848;
 }
 
 .Btn:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
 }
 
 /* .cursor{

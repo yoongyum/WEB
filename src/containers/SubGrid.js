@@ -81,13 +81,12 @@ const SubGrid=()=>{
 
 //컨테이너 =============================
 const Container = styled.div`
-        margin: 8vh 0 4vh 0;
-        padding: 0 16vw 0 16vw;
+        padding: 10vh 16vw 6vh 16vw;
         display : flex;
         flex-direction: column;
         width: 100vw;
-        height : 40vh;
-        /* background-color : lavender; */
+        height : 58vh;
+        background-color : #FFF;
         transition: 1s;
 `
 

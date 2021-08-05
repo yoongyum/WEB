@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
 .TBcontainer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     background: #222222;
     position: fixed;
