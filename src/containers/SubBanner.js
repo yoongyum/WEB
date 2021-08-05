@@ -13,19 +13,19 @@ const DrawContents = [
         { 
                 img : content1,
                 name : 'Converse x Play Comme des Garcons Chuck 70 Ox Blue Quartz',
-                Dday : '2021-08-05 12:00',
+                Dday : '2021-08-10 12:00',
         },{
                 img : content2,
                 name : 'Dior B23 Low Dior Oblique White & Black',
-                Dday : '2021-08-21 12:00',
+                Dday : '2021-08-13 12:00',
         },{
                 img : content3,
                 name : 'Nike SB Dunk Low What The Paul',
-                Dday : '2021-08-31 13:00',
+                Dday : '2021-08-11 13:00',
         },{
                 img : content4,
                 name : 'Nike x Peaceminusone Air Force 1 Low Para-Noise 2.0',
-                Dday : '2021-08-25 23:00',
+                Dday : '2021-08-15 23:00',
         }
 ]
 
@@ -62,6 +62,7 @@ export default SubBanner;
 const Container = styled.div`
         display : flex;
         flex-direction: column;
+        width: 100vw;
         height : 75vh;
         background-color : #252525;
         align-items: center;
