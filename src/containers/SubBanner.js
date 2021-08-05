@@ -13,7 +13,7 @@ const DrawContents = [
         { 
                 img : content1,
                 name : 'Converse x Play Comme des Garcons Chuck 70 Ox Blue Quartz',
-                Dday : '2021-08-05 12:00',
+                Dday : '2021-08-08 12:00',
         },{
                 img : content2,
                 name : 'Dior B23 Low Dior Oblique White & Black',
@@ -62,6 +62,7 @@ export default SubBanner;
 const Container = styled.div`
         display : flex;
         flex-direction: column;
+        width: 100vw;
         height : 75vh;
         background-color : #252525;
         align-items: center;
