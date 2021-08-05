@@ -8,6 +8,7 @@ import './components/Banner.css';
 import Chat from './components/Chatbox'
 import SubBanner from './containers/SubBanner';
 import SubGrid from './containers/SubGrid';
+import Scroll from './components/Scroll'
  
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
   const onModal =()=>{
     SetModal(!modal);
   }
+  
   return (
     <div className="App">
+      <Scroll />
       <TopBar onModal={onModal}/>
       {modal?<SearchModal onModal={onModal}/>:null}
       <Chat />
