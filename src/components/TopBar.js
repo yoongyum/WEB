@@ -4,7 +4,6 @@ import Logo from '../images/KREAMLOGOWHITE.svg'
 import { FiAlignJustify } from "react-icons/fi";
 
 const TopBar=({onModal})=> {
-        
         return(
                 <>
                 <div className="TBcontainer">

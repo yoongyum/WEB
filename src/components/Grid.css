@@ -41,20 +41,22 @@
     width: 70%;
     margin: 20px 0px 0px 0px;
     font-size: 20px;
-    color: #5f3600;
 }
 
 .grid_hover {
     width: 450px;
     height: 450px;
-    border: 4px solid #fea42e;
 }
 
 .change_1 {
     background-color: #fea42e;
+    border: 4px solid #fea42e;
+    color: #5f3600;
 }
 .change_2 {
     background-color: rgb(134, 134, 134);
+    border: 4px solid rgb(134, 134, 134);
+    color: rgb(68, 68, 68);
 }
 
 .grid img {
