@@ -22,9 +22,8 @@ let list2=[{img:Img5,title:'Air Jordan 1 Hi FlyEase ',content:'129,000,000'}
 ,{img:Img7,title:'Air Jordan 1 Hi FlyEase ',content:'129,000,000',}
 ,{img:Img8,title:'Air Jordan 1 Hi FlyEase ',content:'129,000,000',},
 ]
-
-
 const Grid=()=>{
+    
     //더보기 버튼 State
     const [modal,SetModal]=useState(false);
     const ClickModal=()=>{
@@ -69,25 +68,52 @@ const Grid=()=>{
     function del(e){
             e.preventDefault();
       }
+
+    let lastScroll=0
+    function scroll(){
+        const mother=document.querySelector(`.mother`)
+        let SCROLL=1300
+        if(window.scrollY>SCROLL){
+            if(window.scrollY>lastScroll){
+               mother.classList.add(`lift-up`)
+            }
+            else{
+               mother.classList.remove(`lift-up`)
+            }
+            lastScroll=window.scrollY
+        }
+
+    }  
+    window.addEventListener('scroll',scroll)  
       
-      return(
+    return(
         <div onContextMenu={del} className="mother">
             <div className="all">
                 {
                     list.map((val)=>{
-                        return <div onMouseDown={mouseDown} className="grid fake">
+                             return <div onMouseDown={mouseDown} className="grid fake">
                         <img src={val.img} className="imgset stopEvent" width="200px" alt=""></img>
                         <li className="list">{val.title} {val.content}</li>
                         </div>
-
                     })
                 }
             </div>
+            <div className="all">
+                {
+                    list2.map((val)=>{
+                             return <div onMouseDown={mouseDown2} className="grid fake">
+                        <img src={val.img} className="imgset stopEvent" width="200px" alt=""></img>
+                        <li className="list">{val.title} {val.content}</li>
+                        </div>
+                    })
+                }
+            </div>
+            
 
             <div className="all">
                     {modal?
-                        list2.map((val)=>{    
-                        return <div onMouseDown={mouseDown2} className="grid fake">
+                        list2.map((val)=>{  
+                            return <div onMouseDown={mouseDown2} className="grid fake">
                         <img src={val.img} className="imgset stopEvent" width="200px" alt=""></img>
                         <li className="list">{val.title} {val.content}</li>
                         </div>
