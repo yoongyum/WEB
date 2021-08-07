@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import Pickture from '../components/SubGrid/Pickture'
+import Card from '../components/SubGrid/Card'
+import { useState } from 'react';
 import { BiChevronLeft,BiChevronRight } from "react-icons/bi";
 //이미지소스
 import img1 from '../images/shoeKream/content1.jpeg'
@@ -61,20 +62,21 @@ const Contents = [
                 name : 'nineY',
         }
 ]
-
-
 const SubGrid=()=>{
+        const [posX,setidx] = useState(0);
+
         return(
                 <Container>
                         <Title>#shoeKREAM</Title>
-                        <GridArea>
-                                {Contents.map((val,idx)=>{
-                                        if(idx > 5) return null;
-                                        return <Pickture content={val}/>
-                                })}
-                                <PreButton><BiChevronLeft/></PreButton>
-                                <NextButton><BiChevronRight /></NextButton>
-                        </GridArea>
+                        <Content posX={posX}>
+                                <ListArea posX={posX}>
+                                        {Contents.map((val,idx)=>{
+                                                return <Card content={val}/>
+                                        })}
+                                </ListArea>
+                                <PreButton  type={0} onClick={()=>setidx(posX+11)}><BiChevronLeft/></PreButton>
+                                <NextButton  type={1} onClick={()=>setidx(posX-11)}><BiChevronRight /></NextButton>
+                        </Content>
                 </Container>
         )
 }
@@ -85,11 +87,10 @@ const Container = styled.div`
         display : flex;
         flex-direction: column;
         width: 100vw;
-        height : 58vh;
+        height : 60vh;
         background-color : #FFF;
         transition: 1s;
 `
-
 //타이틀 
 const Title = styled.div`
         display : flex;
@@ -112,16 +113,16 @@ const PreButton = styled.div`
         opacity: 0;
         width: 5vh;
         height: 5vh;
-        z-index: 1000;
         border-radius: 50vw;
         cursor: pointer;
-        left:-1%;
+        ${props=>props.type === 0 ? {left : '-1%'} : {right : '-1%'}};
         border: 1px #000 solid;
         transition: .4s;
-        /* left: -50%; */
         &:hover{
-                transform: scale(1.2);
-                background-color: #303030;
+                transform: scale(1.3);
+                background-color: #909090;
+                border: 1.5px #FFF solid;
+                opacity: 0.5;
                 color : #FFF;
         }
 `
@@ -134,35 +135,46 @@ const NextButton = styled.div`
         opacity: 0;
         width: 5vh;
         height: 5vh;
-        z-index: 1000;
-        right: -1%;
+        ${props=>props.type === 0 ? {left : '-1%'} : {right : '-1%'}};
         border-radius: 50vw;
         border: 1px #000 solid;
         cursor: pointer;
         /* right: -50%; */
         transition: .4s;
         &:hover{
-                transform: scale(1.2);
-                background-color: #303030;
+                transform: scale(1.3);
+                background-color: #909090;
+                border: 1.5px #FFF solid;
                 color : #FFF;
         }
 `
 //그리드 컨텐츠
-const GridArea = styled.div`
+const Content = styled.div`
         display : flex;
         position: relative;
-        flex : 1;
-        justify-content: left;
+        width: 66vw;
+        height: 100%;
+        overflow-x: hidden;
+        /* background-color: lavender; */
         align-items: center;
-        /* background-color: gray; */
-        white-space: nowrap;
-        cursor: pointer;
         transition: .7s;
         &:hover ${PreButton}  {
+                display : ${props=>props.posX !== 0 ? 'flex':'none'};
                 opacity: 0.9;
         }
         &:hover ${NextButton}  {
+                display : ${props=>props.posX !== -11*(Contents.length-6) ? 'flex':'none'};
                 opacity: 0.9;
         }
+`
+const ListArea = styled.div`
+        display : inline-block;
+        height: 100%;
+        /* background-color: yellow; */
+        position: relative;
+        vertical-align: bottom;
+        transition: .6s;
+        left: ${props=>props.posX}vw;
+        white-space: nowrap;
 `
 export default SubGrid;
