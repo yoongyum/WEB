@@ -11,6 +11,7 @@
     color: white;
     margin-top: 100px;
 }
+
 .mother {
     width: 100vw;
     background-color: lightgray;
@@ -19,7 +20,15 @@
     background-size: 45%;
     background-position: top;
     background-repeat: no-repeat;
+    transition-duration: 1s;
+    overflow: hidden;
 }
+.mother.lift-up {
+    transition-property: transform;
+    transform: translateY(-100%);
+    transition-duration: 1.5s;
+   }
+   
 .grid {
     cursor: pointer;
     width: 300px;
@@ -32,6 +41,7 @@
     transition-duration: 0.5s;
     overflow: hidden;
     border: 4px solid white;
+    box-shadow: 5px 5px 10px 1px rgb(124, 124, 124);
 }
 
 .grid:hover {
@@ -54,11 +64,13 @@
     background-color: #fea42e;
     border: 4px solid #fea42e;
     color: #5f3600;
+    box-shadow: 5px 5px 10px 1px #794c13;
 }
 .change_2 {
     background-color: rgb(134, 134, 134);
     border: 4px solid rgb(134, 134, 134);
     color: rgb(68, 68, 68);
+    box-shadow: 5px 5px 10px 1px #575757;
 }
 
 .grid img {
@@ -94,7 +106,7 @@
     cursor: pointer;
     transition-duration: 0.5s;
     display: block;
-    margin: 100px auto 100px auto;
+    margin: 50px auto 50px auto;
     background-color: #484848;
 }
 
