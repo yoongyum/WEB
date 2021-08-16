@@ -13,7 +13,7 @@
 }
 
 .mother {
-    width: 100vw;
+    width: 100%;
     background-color: lightgray;
     background-image: url(../images/nike.png);
     background-attachment: fixed;
@@ -27,8 +27,8 @@
     transition-property: transform;
     transform: translateY(-100%);
     transition-duration: 1.5s;
-   }
-   
+}
+
 .grid {
     cursor: pointer;
     width: 300px;
