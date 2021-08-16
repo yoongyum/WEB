@@ -5,7 +5,7 @@ const ProductList = () => {
         <Container>
             <TopArea>
                 <Title>Most Popular</Title>
-                <SubTitle>인기 상품</SubTitle>
+                <SubTitle>인기 s상품</SubTitle>
             </TopArea>
             <Body></Body>
         </Container>
