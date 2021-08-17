@@ -1,21 +1,17 @@
-import styled from 'styled-components'
-import ad from '../images/ad/ad1.png'
+import styled from "styled-components";
 
-const AdBanner=()=>{
-        return (
-                <Container />
-        )
-
-}
+const AdBanner = ({ AD }) => {
+    return <Container AD={AD} />;
+};
 
 const Container = styled.div`
-        width: 100vw;
-        height: 55vh;
-        background-color: #3682b0;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(${ad});
-        cursor: pointer;
-`
+    width: auto;
+    height: 50vh;
+    background-color: ${props => props.AD.color};
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${props => props.AD.img});
+    cursor: pointer;
+`;
 export default AdBanner;

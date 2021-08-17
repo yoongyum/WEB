@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@
     background: #222222;
     position: fixed;
     /* height: 10vh; */
-    min-height: 9vh;
+    min-height: 7vh;
     z-index: 9000;
 }
 .MinC {
@@ -29,8 +29,7 @@
 }
 .KreamLogo {
     margin-left: 14vw;
-    width: 12vw;
-    height: 7vh;
+    width: 8vw;
     cursor: pointer;
 }
 .hamburgBTN {
