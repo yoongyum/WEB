@@ -23,15 +23,15 @@ function App() {
 
     return (
         <div className="App">
-            <Scroll />
+            {/* <Scroll /> */}
             <TopBar onModal={onModal} />
             {modal ? <SearchModal onModal={onModal} /> : null}
-            <Chat />
+            {/* <Chat /> */}
             <header className="App-header">
                 <Banner />
             </header>
             <ProductList />
-            <Grid />
+            {/* <Grid /> */}
             <AdBanner AD={sony} />
             <SubBanner />
             <SubGrid />

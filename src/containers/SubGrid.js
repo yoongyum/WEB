@@ -129,12 +129,10 @@ const PreButton = styled.div`
     border-radius: 50vw;
     cursor: pointer;
     ${props => (props.type === 0 ? { left: "-1%" } : { right: "-1%" })};
-    border: 1px #000 solid;
     transition: 0.4s;
     &:hover {
         transform: scale(1.3);
         background-color: #000;
-        border: 1.5px #fff solid;
         opacity: 0.5;
         color: #fff;
     }
